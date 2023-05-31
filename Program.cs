@@ -1,35 +1,11 @@
-﻿namespace Prog_120_S23_L15_ForLoops
+﻿using System.Threading.Channels;
+
+namespace Prog_120_S23_L15_ForLoops
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-
-
-            // You use a while loop if you do not know the end condition
-            // Asks the user to reenter their user name and password
-
-            string userName = "Will";
-            string password = "Cram";
-
-            Console.Write("User Name: ");
-            string userInputName = Console.ReadLine();
-
-            Console.Write("Password: ");
-            string userPassword = Console.ReadLine();
-
-            // Did the user enter the wrong name OR did the user enter the wrong password
-
-            // Name and password and they are BOTH correct
-            bool userNameIsIncorrect = userInputName != userName;
-
-
-            // A loop will always run while true. <----
-            // It's all in how we phrase the question
-            while (userInputName != userName || userPassword != password)
-            {
-
-            }
 
 
         } // main
@@ -104,6 +80,47 @@
 
 
         }
+
+        public static void WhileLoopExample()
+        {
+            // You use a while loop if you do not know the end condition
+            // Asks the user to reenter their user name and password
+
+            string userName = "Will";
+            string password = "Cram";
+
+            Console.Write("User Name: ");
+            string userInputName = Console.ReadLine();
+
+            Console.Write("Password: ");
+            string userPassword = Console.ReadLine();
+
+            // Did the user enter the wrong name OR did the user enter the wrong password
+
+            // Name and password and they are BOTH correct
+            bool userNameIsIncorrect = userInputName != userName;
+
+
+            // A loop will always run while true. <----
+            // It's all in how we phrase the question
+            // If user entered the wrong name OR the wrong password
+            // If the user name is correct AND the password is correct
+            // !(userInputName == userName && userPassword == password)
+            while (userInputName != userName || userPassword != password)
+            // The INVERSE of this condition
+            {
+                Console.WriteLine("You have entered an invalid userName or Password. Please try again.");
+
+                Console.Write("User Name: ");
+                userInputName = Console.ReadLine();
+
+                Console.Write("Password: ");
+                userPassword = Console.ReadLine();
+            }
+
+            Console.WriteLine("Welcome!");
+
+        } // WhileLoopExample()
 
         // Inital Example
         public static void ForLoopBegin()
