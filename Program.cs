@@ -6,9 +6,102 @@ namespace Prog_120_S23_L15_ForLoops
     {
         static void Main(string[] args)
         {
-
+            LastExample();
+         
 
         } // main
+
+        public static void LastExample()
+        {
+
+
+            do
+            {
+                Console.WriteLine("Enter your username: ");
+                userName = Console.ReadLine();
+
+                Console.WriteLine("Enter your password: ");
+                password = Console.ReadLine();
+
+                if (userName == "Ben" && password == "ben1")
+
+                {
+                    Console.WriteLine("Welcome, " + userName);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid username or password");
+                }
+
+                attempts++;
+
+                if (attempts >= 3)
+                {
+                    Console.WriteLine("Max number of attempts reached. Exiting...");
+                    return;
+                }
+
+            } while (true);
+
+            Console.WriteLine("You have successfully logged in!");
+            Console.WriteLine($"Max number of attempts: {attempts}\n");
+
+
+
+        }
+
+        public static void DecrementalLoops()
+        {
+            string[] students = new string[]
+         {
+                "David", // 0
+                "Nancy", // 1
+                "Benel", // 2
+                "Will", // 3
+                "Josh" // 4
+         };
+
+            //5 > 
+
+            // The last index of an array is ALWAYS arrayName.Length - 1
+
+            // Start : End : Change
+            for (int i = students.Length - 1;
+                i >= 0;
+                i--)
+            {
+                Console.WriteLine(students[i]);
+            }
+
+            //0 1 2 3 4 5
+
+
+            //// int index = 0;
+            //// while(index < students.Length) {
+            //// index++;
+            //// }
+
+            //for (int i = 1; i < students.Length; i += 2)
+            //{
+            //    Console.WriteLine(i + " : " + students[i]);
+            //}
+
+            //// Practice by printing RANGES of numbers with a for loop
+
+
+            //// Print from -10 to 200, and increment by 2
+
+            //// Start ; End ; Change
+            //for (int i = -10; i < 201; i += 2)
+            //{
+            //    // ++ will ONLY go up by 1
+            //    // You displayed the number THEN added 1 to it
+            //    Console.WriteLine(i);
+            //    // After the write line, i is now +1
+            //}
+
+        }
 
         public static void SecondForLoopExample()
         {
@@ -43,43 +136,7 @@ namespace Prog_120_S23_L15_ForLoops
 
         }
 
-        public static void LastExample()
-        {
-            //do
-            //{
-            //    Console.WriteLine("Enter your username: ");
-            //    userName = Console.ReadLine();
 
-            //    Console.WriteLine("Enter your password: ");
-            //    password = Console.ReadLine();
-
-            //    if (userName == "Ben" && password == "ben1")
-
-            //    {
-            //        Console.WriteLine("Welcome, " + userName);
-            //        break;
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("Invalid username or password");
-            //    }
-
-            //    attempts++;
-
-            //    if (attempts >= 3)
-            //    {
-            //        Console.WriteLine("Max number of attempts reached. Exiting...");
-            //        return;
-            //    }
-
-            //} while (true);
-
-            //Console.WriteLine("You have successfully logged in!");
-            //Console.WriteLine($"Max number of attempts: {attempts}\n");
-
-
-
-        }
 
         public static void WhileLoopExample()
         {
