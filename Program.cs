@@ -7,6 +7,13 @@
             Console.WriteLine("Hello, World!");
         } // main
 
+        // For loop
+        // Purpose
+        // Syntax
+        // Useage with arrays
+        // Nested Loops
+
+
     } // class
 
 } // namespace
