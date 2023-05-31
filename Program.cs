@@ -13,6 +13,56 @@ namespace Prog_120_S23_L15_ForLoops
 
         public static void LastExample()
         {
+            //string userName;
+            //string password;
+            //int attempts = 0;
+
+            //// Ask the user for their name.
+            //// they get three tries.
+            //// otherwise it will tell us we failed
+
+
+
+            //do
+            //{
+            //    Console.WriteLine("Enter your username: ");
+            //    userName = Console.ReadLine();
+
+            //    Console.WriteLine("Enter your password: ");
+            //    password = Console.ReadLine();
+
+            //    if (userName == "Ben" && password == "ben1")
+
+            //    {
+            //        Console.WriteLine("Welcome, " + userName);
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Invalid username or password");
+            //    }
+
+            //    attempts++;
+
+            //    if (attempts >= 3)
+            //    {
+            //        Console.WriteLine("Max number of attempts reached. Exiting...");
+            //        return;
+            //    }
+
+            //} while (true);
+
+            //Console.WriteLine("You have successfully logged in!");
+            //Console.WriteLine($"Max number of attempts: {attempts}\n");
+
+            string userName;
+            string password;
+            int attempts = 0;
+
+            // Ask the user for their name.
+            // they get three tries.
+            // otherwise it will tell us we failed
+
 
 
             do
@@ -23,7 +73,7 @@ namespace Prog_120_S23_L15_ForLoops
                 Console.WriteLine("Enter your password: ");
                 password = Console.ReadLine();
 
-                if (userName == "Ben" && password == "ben1")
+                if ( (userName == "Ben" || userName == "ben") && password == "ben1")
 
                 {
                     Console.WriteLine("Welcome, " + userName);
@@ -46,9 +96,6 @@ namespace Prog_120_S23_L15_ForLoops
 
             Console.WriteLine("You have successfully logged in!");
             Console.WriteLine($"Max number of attempts: {attempts}\n");
-
-
-
         }
 
         public static void DecrementalLoops()
